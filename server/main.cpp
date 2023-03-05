@@ -95,7 +95,7 @@ int main(int argc, char *argv[]) {
                         getline (file, login, ':');
                         getline (file, hashq);
                     //СВЕРКА ЛОГИНОВ
-                    if(message == login){
+                    if(message != login){
                         std::strcpy(buffer, err.c_str());
                         send(work_sock, buffer, err.length(), 0);
                         error = "Ошибка логина";
